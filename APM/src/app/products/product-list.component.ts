@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import { IProduct } from './product';
 
 @Component({
   selector: 'pm-products',
   templateUrl: './product-list.component.html',
+  styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent {
   pageTitle: string = 'Product List!';
@@ -10,7 +12,7 @@ export class ProductListComponent {
   imageMargin: number = 2;
   showImage: boolean = false;
   listFilter: string = 'cart';
-  products: any[] = [
+  products: IProduct[] = [
     {
       productId: 2,
       productName: 'Garden Cart',
@@ -19,7 +21,7 @@ export class ProductListComponent {
       description: '15 gallon capacity rolling garden cart',
       price: 32.99,
       starRating: 4.2,
-      imageUrl: 'assets/images/garden_cart.png',
+      imageUrl: 'assets/images/garden_cart.png'
     },
     {
       productId: 5,
